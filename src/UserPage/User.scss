@@ -1,0 +1,110 @@
+@import "../variables.scss";
+.profileContainer {
+  width: 50rem;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.userDetailsContainer {
+  display: flex;
+  width: inherit;
+  align-items: center;
+  justify-content: space-around;
+  border: 2px solid black;
+  border-radius: 12px;
+  padding: 8px 4px;
+}
+.userDetailsContainer__userDetails {
+  display: flex;
+}
+.userData {
+  margin-left: 1rem;
+}
+.userDetails {
+  margin: 0;
+  padding: 0;
+}
+.userDataKeys {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 5rem;
+}
+.postsContainer {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  column-gap: 2rem;
+  row-gap: 2rem;
+  border: 2px solid black;
+  border-radius: 0.75rem;
+  margin-top: 14px;
+  padding: 16px 0;
+  width: inherit;
+  align-items: center;
+  justify-content: center;
+}
+.postCard {
+  border: 2px solid black;
+  border-radius: 12px;
+  box-shadow: 0 0 2px 2px black;
+  padding: 4px;
+  height: 18rem;
+  width: 13rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+.postCard:hover {
+  cursor: pointer;
+  background-color: black;
+  color: $primary_color;
+  border: 2px solid $secondary_color;
+  .postCard__title {
+    color: black;
+    background-color: $secondary_color;
+  }
+}
+.postCard__title {
+  background-color: $primary_color;
+  border: 2px solid black;
+  border-radius: 10px;
+  height: 3rem;
+  overflow: hidden;
+  padding: 2px 8px;
+  margin: 0 0 8px 0;
+}
+.postCard__body {
+  margin: 0;
+  padding: 0 10px;
+  height: 14rem;
+  overflow: hidden;
+}
+
+@media screen and (min-width: 1081px) {
+  .profileContainer {
+    width: 50rem;
+  }
+}
+@media screen and (min-width: 721px) and (max-width: 1080px) {
+  .profileContainer {
+    width: 40rem;
+  }
+  .postsContainer {
+    grid-template-columns: auto auto;
+  }
+}
+@media screen and (max-width: 720px) {
+  .profileContainer {
+    width: 22rem;
+  }
+  .userDetailsContainer {
+    flex-direction: column;
+    align-items: baseline;
+  }
+  .postsContainer {
+    grid-template-columns: auto;
+  }
+}

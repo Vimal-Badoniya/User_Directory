@@ -1,0 +1,60 @@
+@import "../variables.scss";
+.directoryContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.homeTitleContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.homeTitleContainer__title {
+  background-color: $primary_color;
+}
+.usersContainer {
+  border: 3px solid black;
+  margin: 1rem;
+  padding: 0.5rem 1rem;
+}
+.usersContainer__user {
+  border: 1px solid black;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+  padding: 0 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 2.5rem;
+}
+.usersContainer__user:hover{
+  box-shadow: 0 0 2px 2px black;
+  cursor: pointer;
+}
+.usersContainer__userNameAndPost {
+  display: flex;
+  align-items: center;
+}
+.usersContainer__userName {
+  margin: 0;
+  padding: 0;
+}
+
+// small screen (Smartphone)- upto 720px
+// medium screen (Tablet)- upto 1080px
+// large screen (Desktop, Laptop) - more than 1080px
+@media screen and (max-width: 720px) {
+  .usersContainer {
+    width: 20rem;
+  }
+}
+@media screen and (min-width: 721px) and (max-width: 1080px) {
+  .usersContainer {
+    width: 40rem;
+  }
+}
+@media screen and (min-width: 1081px) {
+  .usersContainer {
+    width: 50rem;
+  }
+}
